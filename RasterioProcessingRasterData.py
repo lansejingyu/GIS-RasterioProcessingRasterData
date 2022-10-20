@@ -30,12 +30,12 @@ def Files():
 	print("5.获取波段索引号-从1开始:", dataset.indexes)  # 获取波段索引号 从1开始
 	print("6.数据的影像宽度:", dataset.width)  # 数据的影像宽度
 	print("7.数据的影像高度:", dataset.height)  # 数据的影像高度
-	print("7.数据的影像面积:",
+	print("8.数据的影像面积:",
 		  dataset.width * dataset.height * (dataset1.GetGeoTransform())[1:2][0] * (dataset1.GetGeoTransform())[1:2][
 			  0] / 1000000, "平方千米")  # 数据的影像面积 (dataset1.GetGeoTransform())[1:2][0]#typr=tuple  将8中的像元大小数据取出来.
-	print("8.空间参数(栅格数据的六参数:左上角坐标，像元X、Y方向大小，旋转等信息。 要注意，Y方向的像元大小为负值):\n",
+	print("9.空间参数(栅格数据的六参数:左上角坐标，像元X、Y方向大小，旋转等信息。 要注意，Y方向的像元大小为负值):\n",
 		  dataset1.GetGeoTransform())
-	print("9.数据的地理范围:\n", dataset.bounds)  # 数据的地理范围
+	print("10.数据的地理范围:\n", dataset.bounds)  # 数据的地理范围
 	print('''
 	功能点列表：
 	1.根据像元的row和col获取当前像元中心坐标
