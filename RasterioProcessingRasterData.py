@@ -6,6 +6,9 @@
 # @Time : 2022/10/19 14:49
 
 import rasterio
+import rasterio.sample
+import rasterio.vrt
+import rasterio._features
 from osgeo import gdal
 
 
