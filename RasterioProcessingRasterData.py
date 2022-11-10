@@ -24,17 +24,28 @@ def Files():
 	Blanklines()
 	print("基本属性数据：")
 	print("1.数据路径+文件名:", dataset.name)  # 数据路径+文件名
+	print()
 	print("2.数据格式:", dataset.driver)  # 数据格式
+	print()
 	print("3.数据的投影坐标系:", dataset.crs)  # 数据的投影坐标系
+	print()
 	print("4.数据的波段数目:", dataset.count)  # 数据的波段数目
+	print()
 	print("5.获取波段索引号-从1开始:", dataset.indexes)  # 获取波段索引号 从1开始
+	print()
 	print("6.数据的影像宽度:", dataset.width)  # 数据的影像宽度
+	print()
 	print("7.数据的影像高度:", dataset.height)  # 数据的影像高度
+	print()
 	print("8.数据的影像面积:",
-		  dataset.width * dataset.height * (dataset1.GetGeoTransform())[1:2][0] * (dataset1.GetGeoTransform())[1:2][
-			  0] / 1000000, "平方千米")  # 数据的影像面积 (dataset1.GetGeoTransform())[1:2][0]#typr=tuple  将8中的像元大小数据取出来.
+	      dataset.width * dataset.height * (dataset1.GetGeoTransform())[1:2][0] * (dataset1.GetGeoTransform())[1:2][
+		      0] / 1000000, "平方千米"
+	      )  # 数据的影像面积 (dataset1.GetGeoTransform())[1:2][0]#typr=tuple  将8中的像元大小数据取出来.
+	print()
 	print("9.空间参数(栅格数据的六参数:左上角坐标，像元X、Y方向大小，旋转等信息。 要注意，Y方向的像元大小为负值):\n",
-		  dataset1.GetGeoTransform())
+	      dataset1.GetGeoTransform()
+	      )
+	print()
 	print("10.数据的地理范围:\n", dataset.bounds)  # 数据的地理范围
 	print('''
 	功能点列表：
@@ -42,7 +53,8 @@ def Files():
 	2.根据像元中心坐标获取像元行列号
 	3.获取像元的左上角坐标以及右下角坐标(空间位置)
 	4.重新选择.TIF文件
-	''')
+	'''
+	      )
 
 
 def SelectionFunction():
@@ -114,4 +126,5 @@ def Function():
 
 Files()
 SelectionFunction()
+print()
 Function()
